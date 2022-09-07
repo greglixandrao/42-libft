@@ -6,13 +6,9 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 19:05:41 by coder             #+#    #+#             */
-/*   Updated: 2022/09/07 21:05:21 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/07 23:39:44 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-/*#include <string.h>
-#include <stdio.h>*/
 
 int	ft_strlen(char *s);
 
@@ -30,17 +26,3 @@ char	*ft_strdup(char *src)
 	new[i] = '\0';
 	return (new);
 }
-/*
-int	main(int argc, char **argv)
-{
-	char	*meu_strdup;
-	char	*original_strdup;
-
-	if (argc == 2)
-	{
-		meu_strdup = ft_strdup(argv[1]);
-		original_strdup = strdup(argv[1]);
-		printf(":%s:\n:%s:\n", meu_strdup, original_strdup);
-	}
-	return (0);
-}*/
