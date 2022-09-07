@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 04:37:30 by gtreviza          #+#    #+#             */
-/*   Updated: 2022/09/07 04:58:26 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/09/07 21:26:31 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int result;
-	int count;
+	int	result;
+	int	count;
 
 	result = 0;
 	count = 1;
