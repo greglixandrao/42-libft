@@ -1,5 +1,7 @@
 a.out
+*.o
 DS_Store
 main.c
 /libftTester
 /.vscode
+/testes_libft
