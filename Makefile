@@ -13,7 +13,7 @@
 NAME 	= libft.a
 SRCS 	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_atoi.c ft_strdup.c
 CC 		= gcc -c
-INC 	= -I libft.h
+INC 	= -I .\libft.h
 OBJ 	= ${SRCS:.c=.o}
 FLAGS 	= -Wall -Wextra -Werror
 
@@ -31,4 +31,5 @@ clean:
 
 fclean: clean
 	rm -f ${NAME}
+
 re: fclean all
