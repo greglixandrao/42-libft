@@ -6,11 +6,11 @@
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 04:21:12 by gtreviza          #+#    #+#             */
-/*   Updated: 2022/09/07 04:25:34 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/09/09 01:59:11 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+int ft_isprint(int c)
 {
 	if (c >= 32 && c <= 127)
 		return (1);

@@ -3,25 +3,32 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
+#    By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/07 21:27:10 by coder             #+#    #+#              #
-#    Updated: 2022/09/08 02:33:09 by coder            ###   ########.fr        #
+#    Updated: 2022/09/08 20:02:21 by gtreviza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-FLAGS = -Wall -Wextra -Werror
-LIBFT_A = libft.a
+NAME 	= libft.a
+SRCS 	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_atoi.c ft_strdup.c
+CC 		= gcc -c
+INC 	= -I libft.h
+OBJ 	= ${SRCS:.c=.o}
+FLAGS 	= -Wall -Wextra -Werror
 
-all:
-	$(CC) -c $(FLAGS) *.c -I libft.h
-	ar -rc libft.a *.o
+all: ${NAME}
+
+${NAME}: ${OBJ}
+	ar -rcs ${NAME} ${OBJ}
+	ar -t ${NAME}
+
+${OBJ}:
+	${CC} ${FLAGS} ${@:.o=.c} ${INC}
 
 clean:
-	rm -rf *.o
+	rm -f ${OBJ}
 
 fclean: clean
-	rm -rf *.a
-re:
-	
+	rm -f ${NAME}
+re: fclean all
