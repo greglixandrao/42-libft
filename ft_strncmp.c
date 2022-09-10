@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 21:15:24 by coder             #+#    #+#             */
-/*   Updated: 2022/09/09 19:59:03 by gtreviza         ###   ########.fr       */
+/*   Created: 2022/09/09 20:01:53 by gtreviza          #+#    #+#             */
+/*   Updated: 2022/09/09 20:06:43 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdlib.h>
+int strcmp(const char *s1, const char *s2, size_t n)
+{
+	unsigned int i;
 
-int ft_isalpha(int c);
-int ft_isdigit(int c);
-int ft_isalnum(int c);
-int ft_isascii(int c);
-int ft_isprint(int c);
-int ft_toupper(int c);
-int ft_tolower(int c);
-int ft_strlen(char *str);
-int ft_atoi(char *str);
-char *ft_strdup(char *src);
-
-#endif
+	i = 1;
+	while (*s1 && i < n)
+	{
+		if (*s1 != *s2)
+		{
+			break;
+		}
+		s1++;
+		s2++;
+		i++;
+	}
+	return (*(const unsigned char *)s1 - *(const unsigned char *)s2);
+}
