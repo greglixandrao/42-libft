@@ -6,7 +6,7 @@
 #    By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/07 21:27:10 by coder             #+#    #+#              #
-#    Updated: 2022/09/10 01:12:00 by gtreviza         ###   ########.fr        #
+#    Updated: 2022/09/10 20:32:12 by gtreviza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,4 +32,5 @@ clean:
 
 fclean: clean
 	rm -f ${NAME}
+
 re: fclean all
