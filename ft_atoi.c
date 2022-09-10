@@ -6,19 +6,18 @@
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 04:37:30 by gtreviza          #+#    #+#             */
-/*   Updated: 2022/09/10 23:03:56 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/09/10 23:19:18 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	// printf("<<%s>>\n\n", str);
-	int result;
-	int sign;
-	int i;
+	int	result;
+	int	sign;
+	int	i;
 
 	result = 0;
 	sign = 1;

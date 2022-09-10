@@ -6,11 +6,11 @@
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 19:46:10 by gtreviza          #+#    #+#             */
-/*   Updated: 2022/09/09 19:49:07 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/09/10 23:22:51 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
