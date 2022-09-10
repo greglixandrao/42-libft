@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 19:05:41 by coder             #+#    #+#             */
-/*   Updated: 2022/09/08 01:29:32 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/10 23:20:42 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *s);
+size_t	ft_strlen(const char *str);
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*new;
 	int		i;
