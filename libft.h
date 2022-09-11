@@ -6,15 +6,15 @@
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 21:15:24 by coder             #+#    #+#             */
-/*   Updated: 2022/09/12 00:44:29 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/09/12 00:50:40 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-# define LIBFT_H
+#define LIBFT_H
 
-# include <unistd.h>
-# include <stdlib.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 int		ft_isascii(int c);
 int		ft_isalpha(int c);
