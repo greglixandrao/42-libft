@@ -6,14 +6,14 @@
 #    By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/07 21:27:10 by coder             #+#    #+#              #
-#    Updated: 2022/09/12 00:50:02 by gtreviza         ###   ########.fr        #
+#    Updated: 2022/09/12 00:57:13 by gtreviza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= libft.a
 SRCS 	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_toupper.c ft_tolower.c ft_strncmp.c ft_strlen.c ft_atoi.c \
-		ft_strdup.c ft_strlcpy.c
+		ft_strdup.c ft_strlcpy.c ft_strlcat.c
 CC 		= gcc -c
 INC 	= -I libft.h
 OBJ 	= ${SRCS:.c=.o}
