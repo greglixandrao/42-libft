@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 19:07:31 by coder             #+#    #+#             */
-/*   Updated: 2022/09/10 23:21:05 by gtreviza         ###   ########.fr       */
+/*   Created: 2022/09/11 23:20:25 by gtreviza          #+#    #+#             */
+/*   Updated: 2022/09/12 00:43:36 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
+	unsigned int	count;
 
-	i = 0;
-	while (*str++)
-		i++;
-	return (i);
+	count = 0;
+	if (size > 0)
+	{
+		while ((*(src + count) != '\0') && (count < (size - 1)))
+		{
+			if (count == size)
+			{
+				count--;
+				break ;
+			}
+			*(dst + count) = *(src + count);
+			count++;
+		}
+	}
+	if (size != 0)
+		*(dst + count) = '\0';
+	while (*(src + count) != '\0')
+		count++;
+	return (count);
 }
