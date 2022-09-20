@@ -6,24 +6,35 @@
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 02:22:57 by gtreviza          #+#    #+#             */
-/*   Updated: 2022/09/14 03:10:08 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/09/18 23:29:22 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
-
-char	*strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	size_t	little_len;
+	size_t		i;
+	size_t		j;
+	const char	*str;
+	const char	*to_find;
 
 	i = 0;
+	str = big;
+	to_find = little;
+	if (to_find[i] == '\0')
+		return ((char *)big);
 	j = 0;
-	little_len = ft_strlen(little)
-	if (little_len == 0)
-		return (big);
-	while ()
+	while (str[i] != '\0' && j < len)
+	{
+		j = 0;
+		while (str[i + j] == to_find[j] && str[i + j] != '\0' && i + j < len)
+		{
+			if (to_find[j + 1] == '\0')
+				return (&((char *)str)[i]);
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
 }
