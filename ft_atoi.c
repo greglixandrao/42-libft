@@ -6,12 +6,9 @@
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 04:37:30 by gtreviza          #+#    #+#             */
-/*   Updated: 2022/09/10 23:19:18 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/09/18 23:35:59 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
