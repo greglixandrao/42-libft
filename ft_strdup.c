@@ -6,13 +6,11 @@
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 19:05:41 by coder             #+#    #+#             */
-/*   Updated: 2022/09/10 23:20:42 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/09/23 23:10:29 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str);
 
 char	*ft_strdup(const char *src)
 {
