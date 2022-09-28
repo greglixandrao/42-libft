@@ -6,14 +6,13 @@
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 21:15:24 by coder             #+#    #+#             */
-/*   Updated: 2022/09/28 07:00:00 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/09/28 07:23:11 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h> // TIRAR ESSA MERDA ANTES DE ENVIAR
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -33,6 +32,7 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_itoa(int n);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	ft_putchar_fd(char c, int fd);
