@@ -6,13 +6,11 @@
 /*   By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 03:39:23 by gtreviza          #+#    #+#             */
-/*   Updated: 2022/09/19 01:09:32 by gtreviza         ###   ########.fr       */
+/*   Updated: 2022/10/01 04:27:59 by gtreviza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str);
 
 char	*ft_strrchr(const char *s, int c)
 {
