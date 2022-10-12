@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/07 21:27:10 by coder             #+#    #+#              #
-#    Updated: 2022/10/08 05:29:13 by gtreviza         ###   ########.fr        #
+#    Created: 2022/10/12 20:37:43 by gtreviza          #+#    #+#              #
+#    Updated: 2022/10/12 20:37:48 by gtreviza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,8 @@ SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_itoa.c ft_striteri.c ft_strmapi.c ft_strtrim.c ft_split.c
 BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-CC		= gcc -c
-INC 	= -I libft.h
+CC		= cc -c
+INC 	= -I ../libft.h
 OBJ		= ${SRCS:.c=.o}
 BONUS_OBJ	= $(BONUS_SRC:%.c=%.o)
 FLAGS	= -Wall -Wextra -Werror
@@ -34,7 +34,7 @@ ${NAME}: ${OBJ}
 
 ${OBJ}:
 	${CC} ${FLAGS} ${@:.o=.c} ${INC}
-	
+
 bonus: $(BONUS_OBJ)
 	ar -rcs ${NAME} ${BONUS_OBJ}
 	ar -t ${NAME}
