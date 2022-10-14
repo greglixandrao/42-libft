@@ -6,49 +6,47 @@
 #    By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 02:02:24 by gtreviza          #+#    #+#              #
-#    Updated: 2022/10/14 03:30:41 by gtreviza         ###   ########.fr        #
+#    Updated: 2022/10/14 03:56:47 by gtreviza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		= cc
-CFLAGS	= -Wall -Wextra -Werror
-LIB1	= ar -rcs
+NAME		= libft.a
+SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \
+			ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c \
+			ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c \
+			ft_calloc.c ft_strdup.c ft_substr.c ft_split.c ft_strjoin.c ft_strtrim.c ft_itoa.c ft_strmapi.c \
+            ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+BONUS_SRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c
+INC			= -I libft.h
+OBJS		= ${SRCS:.c=.o}
+BONUS_OBJS	= ${BONUS_SRCS:.c=.o}
+CC			= cc -c
+CFLAGS		= -Wall -Wextra -Werror
 
-NAME	= libft.a
+all: ${NAME}
 
-INCLUDE	= libft.h
-SRCS	= ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
-			ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
-			ft_strchr.c ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c \
-			ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
-			ft_memchr.c ft_memcmp.c ft_strdup.c ft_calloc.c ft_itoa.c \
-			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-			ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c \
-			ft_striteri.c
-OBJS	= $(SRCS:.c=.o)
-BONUS_S	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-					ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-BONUS_O	= $(BONUS_S:.c=.o)
+${NAME}: ${OBJS}
+	ar -rcs ${NAME} ${OBJS}
+	ar -t ${NAME}
 
-all:		$(NAME)
+${OBJS}:
+	${CC} ${CFLAGS} ${@:.o=.c} ${INC}
 
-$(NAME):	$(OBJS) $(INCLUDE)
-			$(LIB1) $(NAME) $(OBJS)
+${BONUS_OBJS}:
+	${CC} ${CFLAGS} ${@:.o=.c} ${INC}
+	ar -rcs ${NAME} $@
 
-bonus:		$(NAME) $(BONUS_O)
-			$(LIB1) $(NAME) $(BONUS_O)
-
-.c.o:
-			$(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $(<:.c=.o)
+bonus: ${BONUS_OBJS}
 
 clean:
-	rm -f ${OBJS} $(BONUS_O)
+	rm -f ${OBJS} ${BONUS_OBJS}
 
 fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
 
-rebonus:	fclean bonus
+rebonus: fclean bonus
 
-.PHONY:		all clean fclean re bonus rebonus
+.PHONY:	all clean fclean re bonus rebonus
