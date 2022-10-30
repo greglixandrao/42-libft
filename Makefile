@@ -6,7 +6,7 @@
 #    By: gtreviza <gtreviza@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 20:37:43 by gtreviza          #+#    #+#              #
-#    Updated: 2022/10/12 20:37:48 by gtreviza         ###   ########.fr        #
+#    Updated: 2022/10/29 23:14:06 by gtreviza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,23 +28,36 @@ FLAGS	= -Wall -Wextra -Werror
 
 all: ${NAME}
 
-${NAME}: ${OBJ}
-	ar -rcs ${NAME} ${OBJ}
+${NAME}: ${OBJS}
+	ar -rcs ${NAME} ${OBJS}
 	ar -t ${NAME}
 
+<<<<<<< HEAD
 ${OBJ}:
 	${CC} ${FLAGS} ${@:.o=.c} ${INC}
 
 bonus: $(BONUS_OBJ)
 	ar -rcs ${NAME} ${BONUS_OBJ}
 	ar -t ${NAME}
+=======
+${OBJS}:
+	${CC} ${CFLAGS} ${@:.o=.c} ${INC}
+
+${BONUS_OBJS}:
+	${CC} ${CFLAGS} ${@:.o=.c} ${INC}
+	ar -rcs ${NAME} $@
+
+bonus: ${BONUS_OBJS}
+>>>>>>> 251339c41fed32bf24fef1bf2fe4aa56e4e721a2
 
 clean:
-	rm -f ${OBJ} $(BONUS_OBJ)
+	rm -f ${OBJS} ${BONUS_OBJS}
 
 fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+rebonus: fclean bonus
+
+.PHONY:	all clean fclean re bonus rebonus
